@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard';
+}
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 여기서부터 header */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1920px;
+    z-index: 1000;
+}
+.header-container.down{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.header-container{
+    position: relative;
+    overflow: hidden;
+    /* z-index: 1000; */
+}
+
+.logo{
+    width: 14.5rem; height: 9.125rem;
+    margin-left: 6.25rem;
+    cursor: pointer;
+}
+
+/* hamburger */
+.hamburger{
+    position: absolute;
+    top: 50%; right: 6.25rem;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.hamburger span{
+    height: 0.188rem;
+    width: 1.875rem;
+    background-color: #fff;
+    position: absolute;
+}
+.hamburger span:nth-child(1){
+    position: absolute;
+    bottom: 1.75rem;
+}
+.hamburger span:nth-child(2){
+    position: absolute;
+    bottom: 1.125rem;
+}
+.hamburger span:nth-child(3){
+    position: absolute;
+    bottom: 0.5rem;
+}
+/* gnb */
+.gnb{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 50;
+    position: fixed;
+    top: 0; left: 0px;
+    display: none;
+    opacity: 0;
+    color: #fff;
+}
+.gnb.on{
+    display: block;
+    opacity: 1;
+    z-index: 1500;
+}
+.gnb .btn-close{
+    position: absolute;
+    top: 3rem; right: 6.25rem;
+    cursor: pointer;
+}
+.gnb .menu_container{
+    position: absolute;
+    top: 50%; left: 43.75rem;
+    transform: translate(-50%,-50%);
+    border-left: 1px solid #fff;
+    padding-left: 1.25rem;
+}
+.gnb .menu_container nav ul li{
+    margin-top: 3.125rem
+}
+.gnb .menu_container nav ul li a{
+    font-size: 3.75rem;
+    font-weight: 600;
+    font-style: italic;
+}
+.gnb .menu_container nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+}
+.gnb .menu_container nav ul li.home{
+    overflow: hidden;
+    height: 3.75rem;
+    margin-top: 0;
+}
+.gnb .menu_container nav ul li.home ul{
+    padding-left: 12.5rem;
+}
+
+.gnb .menu_container nav ul li ul li a p.subm{
+    font-size: 3rem;
+    font-weight: 300;
+}
+.gnb .menu_container nav ul li a:hover p.subm{
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+}
+
+.gnb .menu_container nav ul li a span.deco{
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 1.25rem;
+}
+
+/* sidebx */
+.gnb .sidebx{
+    position: absolute;
+    top: 44%; right: 15.625rem;
+    display: flex;
+}
+
+.gnb .sidebx_icon{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb .sidebx .sidebx_icon a{
+    position: relative;
+}
+
+.gnb .sidebx a img{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+
+.gnb .sidebx_icon a:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.gnb .sidebx .sidebx_icon a p{
+    display: inline-block;
+    width: 6.25rem;
+    position: absolute;
+    top: 40%; 
+}

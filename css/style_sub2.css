@@ -1,0 +1,817 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard';
+}
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 여기서부터 header */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1920px;
+    z-index: 1000;
+}
+.header-container.down{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.header-container{
+    position: relative;
+    overflow: hidden;
+    /* z-index: 1000; */
+}
+
+.logo{
+    width: 14.5rem; height: 9.125rem;
+    margin-left: 6.25rem;
+    cursor: pointer;
+}
+
+/* hamburger */
+.hamburger{
+    position: absolute;
+    top: 50%; right: 6.25rem;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 500;
+}
+.hamburger span{
+    height: 0.188rem;
+    width: 1.875rem;
+    background-color: #fff;
+    position: absolute;
+}
+.hamburger span:nth-child(1){
+    position: absolute;
+    bottom: 1.75rem;
+}
+.hamburger span:nth-child(2){
+    position: absolute;
+    bottom: 1.125rem;
+}
+.hamburger span:nth-child(3){
+    position: absolute;
+    bottom: 0.5rem;
+}
+/* gnb */
+.gnb{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1050;
+    position: fixed;
+    top: 0; left: 0px;
+    display: none;
+    opacity: 0;
+    color: #fff;
+}
+.gnb.on{
+    display: block;
+    opacity: 1;
+    z-index: 1050;
+}
+.gnb .btn-close{
+    position: absolute;
+    top: 3rem; right: 6.25rem;
+    cursor: pointer;
+}
+.gnb .menu_container{
+    position: absolute;
+    top: 50%; left: 43.75rem;
+    transform: translate(-50%,-50%);
+    border-left: 1px solid #fff;
+    padding-left: 1.25rem;
+}
+.gnb .menu_container nav ul li{
+    margin-top: 3.125rem
+}
+.gnb .menu_container nav ul li a{
+    font-size: 3.75rem;
+    font-weight: 600;
+    font-style: italic;
+}
+.gnb .menu_container nav ul li a:hover{
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+}
+.gnb .menu_container nav ul li.home{
+    overflow: hidden;
+    height: 3.75rem;
+    margin-top: 0;
+}
+.gnb .menu_container nav ul li.home ul{
+    padding-left: 12.5rem;
+}
+
+.gnb .menu_container nav ul li ul li a p.subm{
+    font-size: 3rem;
+    font-weight: 300;
+}
+.gnb .menu_container nav ul li a:hover p.subm{
+    border-bottom: 1px solid #fff;
+    opacity: 1;
+}
+
+.gnb .menu_container nav ul li a span.deco{
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 1.25rem;
+}
+
+/* sidebx */
+.gnb .sidebx{
+    position: absolute;
+    top: 44%; right: 15.625rem;
+    display: flex;
+}
+
+.gnb .sidebx_icon{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb .sidebx .sidebx_icon a{
+    position: relative;
+}
+
+.gnb .sidebx a img{
+    width: 6.25rem;
+    height: 6.25rem;
+}
+
+.gnb .sidebx_icon a:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.gnb .sidebx .sidebx_icon a p{
+    display: inline-block;
+    width: 6.25rem;
+    position: absolute;
+    top: 40%; 
+}
+
+/* 여기서부터 main */
+.container{
+    width: 100%;
+    max-width: 1920px;
+    background-color: #fff;
+    overflow: hidden;
+    /* text-align: center; */
+}
+/* 여기서부터 cont1 */
+.cont1{
+    width: 100%;
+    background-color: #000;
+    border-bottom-left-radius: 220px;
+    border-bottom-right-radius: 220px;
+    position: relative;
+    color: #fff;
+}
+.wrap .container .cont1 .videoArea{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 1.875rem;
+    height: 0;
+    overflow: hidden;
+}
+.wrap .container .cont1 .videoArea iframe, .wrap .container .cont1 .videoArea object, .wrap .container .cont1 .videoArea embed{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+} 
+
+.cont1 .bgtxt{
+    position: absolute;
+    top: 69rem; right: 1px;
+    transform: translateX(-50%);
+}
+.cont1 .txtArea{
+    /* height: 1000px; */
+    padding-top: 6.25rem;
+    padding-bottom: 50rem;
+    padding-left: 12.5rem;
+    font-size: 2.25rem;
+}
+.cont1 .content_box{
+    position: absolute;
+    top: 100rem; right: 9.375rem;
+    display: flex;
+    flex-direction: column;
+}
+.cont1 .content_box .bx1{
+    border: 1px solid #fff;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.875rem;
+    margin-bottom: 15px;
+}
+.cont1 .content_box .bx2{
+    border: 1px solid #fff;
+    padding: 0.625rem 1.25rem;
+    border-radius: 1.875rem;
+}
+.cont1 .content_box .bx1 a, .cont1 .content_box .bx2 a {
+    font-size: 2.5rem;
+}
+.cont1 .cardArea{
+    border-bottom-left-radius: 13.75rem;
+    border-bottom-right-radius: 13.75rem;
+    position: relative;
+}
+.cont1 .cardArea p{
+    font-family: 'Paperlogy-8ExtraBold';
+    font-size: 3.125rem;
+    /* margin-left: 11.25rem; */
+    font-weight: 100;
+    position: absolute;
+    top: -4rem; left: 5rem;
+}
+.cont1 .cardArea .slide_wrap img{
+    border-bottom-left-radius: 3.125rem;
+    border-bottom-right-radius: 3.125rem;
+}
+.cont1 .content_box .bx1:hover{
+    background-color: #fff;
+    color: #000;
+}
+.cont1 .content_box .bx2:hover{
+    background-color: #fff;
+    color: #000;
+}
+.cont1Swiper{
+    position: relative;
+    overflow: visible;
+  }
+.cont1Swiper .swiper-wrapper .swiper-slide{
+    border-bottom-left-radius: 15.625rem;
+    border-bottom-right-radius: 15.625rem;
+    bottom: -0.3rem;
+}
+
+.cardArea .swiper-pagination{
+    top: -3rem; left: 45rem;
+    z-index: 20;
+}
+
+.cardArea .swiper-pagination .swiper-pagination-bullet{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: .4rem;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.cardArea .swiper-pagination .swiper-pagination-bullet-active{
+    background-color: #787878;
+    transform: scale(0.5);
+}
+/* 여기서부터 cont2 & cont3 */
+.cont_wrap{
+    margin-top: 12.5rem;
+    background: url(../image/bg2.png) no-repeat 0 /cover;
+}
+/* 여기서부터 cont2 */
+.cont2{
+    position: relative;
+    background-color: #fff;
+    /* display: none; */
+}
+.cont2 span.branch{
+    position: absolute;
+    top: 0; left: 86rem;
+    z-index: 20;
+}
+.cont2 p.tit{
+    font-size: 4rem;
+    position: absolute;
+    top: 12rem; left: 31rem;
+    color: #000;
+}
+.cont2Swiper{
+    position: relative;
+}
+.cont2Swiper .swiper-pagination{
+    position: absolute;
+    bottom: 0px; left: 96.875rem;
+    width: 18.75rem;
+}
+.cont2Swiper .swiper-wrapper .swiper-slide{
+    width: 62.5rem;
+    height: 41.938rem;
+}
+.cont2Swiper .swiper-pagination-bullet{
+    width: 4.375rem;
+    height: 0.625rem;
+    border-radius: 1.875rem;
+    background-color: #d9d9d9;
+    margin-right: 1.25rem;
+}
+.cont2Swiper .swiper-pagination-bullet-active{
+    background-color: #000;
+    width: 4.375rem
+}
+
+.cont2 .content{
+    position: relative;
+}
+.cont2 .content .button{
+    width: 11.25rem;
+    font-size: 1.25rem;
+    padding: 0.625rem 1.875rem;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 1.875rem;
+    position: absolute;
+    bottom: 8.188rem; left: 100rem;
+    z-index: 15;
+}
+.cont2 .content .button:hover{
+    background-color: #000;
+    color: #fff;
+}
+span.circle{
+    width: 0.625rem;
+    height: 0.625rem;
+    background-color: #000;
+    z-index: 25;
+}
+
+/* 여기서부터 cont3 */
+.cont3{
+    text-align: center;
+    padding-top: 18.75rem;
+    margin-top: 18.75rem;
+    border-top-left-radius: 18.75rem;
+    border-top-right-radius: 18.75rem;
+    background-color: #000;
+    color: #fff;
+    padding-bottom: 10.625rem;
+    background-image: url(../image/bg3.png);
+    /* display: none; */
+}
+
+.cont3 p{
+    font-size: 2.813rem;
+}
+.cont3 h1{
+    font-size: 5rem;
+    margin-top: 6.25rem;
+    margin-bottom: 3.125rem;
+}
+.cont3 .photo img:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+/* swipe slder style */
+body {
+    position: relative;
+    height: 100%;
+  }
+
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 0.875rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 1.125rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+ /* 여기서부터 footer */
+ footer{
+    width: 100%;
+    max-width: 1920px;
+    z-index: 1000;
+ }
+.fcon{
+    background-color: #000;
+    color: #B2B2B2;
+    width: 100%;
+    /* max-width: 1920px; */
+    height: 25rem;
+    overflow: hidden;
+  }
+  .inner{
+    margin: 0 auto;
+    text-align: center;
+    padding: 3.125rem 0px;
+  }
+ 
+  .ftop:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .ftop .ft-left{
+    float: left;
+    text-align: left;
+    position: relative;
+    margin-right: 31.25rem;
+    margin-left: 12.5rem;
+    margin-top: 0.938rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+.ftop .ft-left div:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.ftop .ft-left div{
+    float: left;
+}
+.ftop .ft-left .lefttxt{
+    color: #ccc;
+}
+.ftop .ft-left .lefttxt p{
+    margin-top: 0.25rem;
+}
+.ftop .ft-left .righttxt{
+    margin-left: 1.875rem;
+    color: #fff;
+    position: relative;
+}
+.ftop .ft-left .righttxt p{
+    margin-top: 0.25rem;
+}
+.ftop .ft-left .righttxt p:last-child{
+    position: absolute;
+    bottom: 0.125rem; left: 18.75rem;
+}
+.ftop .ft-right{
+    float: left;
+    text-align: left;
+  }
+.ftop .ft-right .f-inner{
+    margin-bottom: 1.875rem;
+    font-size: 1.438rem;
+}
+.ftop .ft-right .f-inner .first{
+    color: #fff;
+}
+.ftop .ft-right .f-inner span.top{
+    color: #fff;
+}
+.ftop .ft-right .ft-txt{
+    font-size: 1.25rem;
+}
+
+.line{
+    margin-top: 3.125rem;
+    width: 100%;
+    border-bottom: 1px solid #B2B2B2;
+}
+.fbot{
+    padding-top: 3.125rem;
+}
+.fbot:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.fbot .copy{
+    font-size: 1.25rem;
+    float: left;
+    margin-right: 34.375rem;
+    margin-left: 12.5rem;
+}
+.fbot .snsBtns{
+    float: left;
+}
+.fbot .snsBtns a{
+    width: 3.438rem;
+    height: 3.375rem;
+    display: inline-block;
+    background: url(../image/icon.png);
+    border-radius: 50%;
+    text-indent: -9999px;
+    margin-right: 40px;
+}
+.fbot .snsBtns .btn1{
+    background-position: 0px 1px;
+}
+.fbot .snsBtns .btn2{
+    background-position: -5rem 1px;
+}
+.fbot .snsBtns .btn3{
+    background-position: -10.125rem 1px;
+}
+.fbot .snsBtns .btn4{
+    background-position: -15rem 1px; 
+}
+.fbot .snsBtns .btn5{
+    background-position: -20.063rem 1.5px;
+}
+
+/* gotop */
+.gotop{
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    display: block;
+    position: fixed;
+    bottom: 50px; right: 50px;
+    border-radius: 30px;
+    border: 1px solid #777;
+    z-index: 100;
+    cursor: pointer;
+}
+.gotop span{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-right: 5px solid #fff;
+    border-top: 5px solid #fff;
+    top: 22px; left: 19px;
+    transform: rotate(-45deg);
+}
+
+/* mobile footer */
+.mobile-fcon{
+    display: none;
+    opacity: 0;
+    background-color: #000;
+}
+.mobile-fcon .f-logo img{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 160px;
+    height: 100px;
+    cursor: pointer;
+}
+.mobile-fcon .mobile-ftop{
+    padding-bottom: 15px;
+    border-bottom: 3px solid #787878;
+    color: #ccc;
+}
+.mobile-fcon .mobile-ftop .first{
+    color: #fff;
+    margin-left: 30px;
+}
+.mobile-fcon .mobile-footer-main{
+    margin: 20px 0 20px;
+    margin-left: 30px;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: #fff;
+}
+.mobile-fcon .mobile-footer-main:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.mobile-fcon .mobile-footer-main .mobile-fmain-left{
+    float: left;
+}
+.mobile-fcon .mobile-footer-main .mobile-fmain-center{
+    float: left;
+    margin-left: 20px;
+}
+.mobile-fcon .mobile-footer-main .mobile-fmain-right{
+    float: left;
+    margin-left: 50px;
+    /* position: absolute;
+    left: 300px; bottom: 100px; */
+}
+.mobile-fcon .mobile-f-btn{
+    margin-bottom: 30px;
+    background-color: inherit;
+}
+
+.mobile-fcon .mobile-f-btn a{
+    font-size: 12px;
+    margin: 30px;
+    padding: 5px 20px;
+    border: 1px solid #787878;
+    color: #fff;
+}
+.mobile-fcon .mobile-f-btn a:hover{
+    background-color: #787878;
+}
+.mobile-fcon p.m-copy{
+    margin-left: 30px;
+    font-size: 15px;
+    color: #787878;
+}
+.f-mobile-sns a{
+    width: 55px;
+    height: 54px;
+    display: inline-block;
+    background: url(../image/icon.png);
+    border-radius: 50%;
+    text-indent: -9999px;
+    margin: 10px;
+    margin-left: 30px;
+}
+.f-mobile-sns .btn1{
+    background-position: 0px 1px;
+}
+.f-mobile-sns .btn2{
+    background-position: -80px 1px;
+}
+.f-mobile-sns .btn3{
+    background-position: -162px 1px;
+}
+.f-mobile-sns .btn4{
+    background-position: -240px 1px; 
+}
+.f-mobile-sns .btn5{
+    background-position: -321px 1.5px;
+}
+
+
+/* 반응형 */
+
+@media screen and (max-width:861px){
+    html{
+        font-size: 62.5%;
+        min-width: 861px;
+    }
+    .header-container{
+        width: 100%;
+    }
+    .logo{
+     margin-left: 0.625rem;
+    }
+
+    .hamburger{
+        right: 3.125rem;
+    }
+
+    .gnb .menu_container{
+        width: 100%;
+        /* margin: 0 auto; */
+        left: 50rem;
+    }
+    .gnb .sidebx{
+        top: 85%;
+        right: 3.125rem;
+    }
+    .gnb .sidebx .sidebx_icon{
+        flex-direction: row;
+        justify-content: right;
+        /* margin: 0; */
+    }
+    .gnb .sidebx .sidebx_icon a p{
+        display: none;
+    }
+
+    .gnb .menu_container .menu1 .home{
+        height: 3.125rem;
+    }
+    .gnb .menu_container nav ul li.home ul {
+        padding-left: 5rem;
+    }
+
+    .gnb .menu_container nav ul li a{
+        font-size: 3.125rem;
+    }
+    .gnb .menu_container nav ul li ul li a p.subm{
+        font-size: 1.5rem;
+    }
+    .gnb.on{
+        width: 100%;
+        height: 100%;
+    }
+    .wrap .container{
+        width: 100%;
+    }
+    .wrap .container .cont1{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .wrap .container .cont1 .txtArea{
+        font-size: 2em;
+        padding-top: 0.625rem;
+        padding-left: 2.25rem;
+        padding-bottom: 12.5rem;
+    }
+    .cont1 .bgtxt{
+        display: none;
+        opacity: 0;
+    }
+    .cont1 .content_box{
+        top: 58%; left: 6rem;
+        text-align: center;
+    }
+    .cont1 .content_box .bx1{
+        bottom: 0rem;
+        right: 33rem;
+    } 
+    .cont1 .content_box .bx2{
+        bottom: -4.125rem;
+        right: 33rem;
+    }
+    .cont1 .content_box .bx1 a, .cont1 .content_box .bx2 a{
+        font-size: 1rem;
+    }
+    .wrap .container .cont1 .cardArea{
+        margin-top: 4rem;
+    }
+    .cardArea .swiper-pagination{
+        left: 18.75rem;
+    }
+    .cont2 p.tit{
+        font-size: 4rem;
+        left: 25rem;
+    }
+    .cont_wrap{
+        margin-top: 9.375rem;
+    }
+    .cont_wrap .cont2 h1{
+        top: 5rem;
+        left: 18.75rem;
+        font-size: 50rem;
+    }
+    .cont2 .content .button{
+        /* display: none; */
+        left: 65rem;
+        bottom: 3rem;
+    }
+    .cont2Swiper .swiper-slide{
+        width: 50rem;
+    }
+    .cont2Swiper .swiper-slide img{
+        width: 100%;
+    }
+    .cont2Swiper .swiper-pagination{
+        bottom: 1rem; left: 45rem;
+    }
+    .swiper-slide{
+        width: 100%;
+    }
+    .cont3{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .cont3 p{
+        font-size: 2rem;
+    }
+
+.cont3 h1{
+    font-size: 4rem;
+}
+.fcon{
+    display: none;
+    opacity: 0;
+}
+.mobile-fcon{
+    display: block;
+    opacity: 1;
+}
+}

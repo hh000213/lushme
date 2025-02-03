@@ -1,0 +1,655 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard';
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ------main title------- */
+.title{
+    background: url(../images/titlebg.png) no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.title .belt{
+    width: 105%;
+    height: 80px;
+    position: absolute;
+    top: 120px;
+}
+.title .belt .titlebelt{
+    width: 100%;
+    height: 100%;
+}
+.title .belt .titlebelt .swiper-wrapper{
+    transition-timing-function: linear;
+}
+.title .belt .titlebelt h1{
+    font-size: 50px;
+    font-style: italic;
+    color: #fff;
+    font-weight: 500;
+    line-height: 70px;
+}
+.title .maincaption{
+    position: absolute;
+    bottom: 50px; left: 100px;
+}
+.title .maincaption strong{
+    color: white;
+    font-size: 150px;
+    font-style: italic;
+}
+.title .products{
+    width: 950px;
+    height: 950px;
+    position: absolute;
+    right: -10px; bottom: -30px;
+}
+.title .products > .container{
+    width: 100%;
+    height: 100%;
+    background: url(../images/leaf.png) no-repeat center/cover;
+    position: relative;
+}
+.title .products .container #prod{
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    position: absolute;
+}
+.title .products .container .dirty{
+    width: 250px;
+    height: 250px;
+    background-image: url(../images/dirty.png);
+    left: 26%; top: 45%;
+    animation: dirty 5s infinite;
+}
+@keyframes dirty{
+    0%{transform:  scaleX(1);}
+    5%, 10%{transform:  scale3d(.9, .9, .9) rotate(-3deg);}
+    20%, 30%, 40%, 50%{transform:  scale3d(1.1, 1.1, 1.1) rotate(3deg);}
+    25%, 35%, 45%{transform:  scale3d(1.1, 1.1, 1.1) rotate(-3deg);}
+    100%{transform:  scaleX(1);}
+}
+.title .products .container .hairmilk{
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/hairmilk.png);
+    left: 60%; top: 10%;
+    animation: dirty 3s .7s infinite;
+}
+.title .products .container .karma{
+    width: 200px;
+    height: 200px;
+    background-image: url(../images/karma.png);
+    left: 50%; top: 65%;
+    animation: karma 5s infinite;
+}
+@keyframes karma{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+.title .products .container .bodybar{
+    width: 130px;
+    height: 130px;
+    background-image: url(../images/bodybar.png);
+    left: 40%; top: 25%;
+    animation: bomb 4s infinite;
+}
+@keyframes bomb{
+    0%{transform: scaleX(1);}
+    5%, 10%{transform: scale3d(.9, .9, .9) rotate(-3deg);}
+    20%, 30%, 40%, 50%{transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);}
+    25%, 35%, 45%{transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);}
+    100%{transform: scaleX(1);}
+}
+.title .products .container .rose{
+    width: 150px;
+    height: 150px;
+    background-image: url(../images/rose.png);
+    left: 10%; top: 55%;
+    animation: rose 10s infinite;
+}
+@keyframes rose{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+/* ------main mid1------ */
+
+.mid1{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    /* background-color: pink; */
+}
+.mid1 .caption{
+    width: 1240px;
+    text-align: center;
+    padding: 200px;
+    margin: 0 auto;
+    font-size: 20px;
+    position: relative;
+}
+.mid1 .caption h1{
+    margin-bottom: 30px;
+}
+.mid1 .obj{
+    width: 1240px;
+    height: 500px;
+    position: relative;
+    bottom: 73%; left: -7%;
+}
+.mid1 .obj span{
+    display: block;
+    position: absolute;
+}
+.mid1 .obj .circle{
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+    border-radius: 300px;
+}
+.mid1 .obj .blckline{
+    width: 150%;
+    height: 5px;
+    background-color: #000;
+    top: 30%;
+}
+.mid1 .obj .whtline{
+    width: 300px;
+    height: 5px;
+    background-color: #fff;
+    top: 30%;
+}
+.mid1 i{
+    position: absolute;
+    z-index: 9;
+    width: 300px;
+    height: 300px;
+    background: url(../images/rasberry.png) no-repeat center;
+    background-size: 100%;
+    opacity: 50%;
+    bottom: -100px; right: -50px;
+}
+
+/* ======mid2====== */
+.mid2{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+.mid2 .mid2swiper{
+    margin: 0 auto;
+    height: 503px;
+    width: 1240px;
+    position: relative;
+    border-radius: 30px;
+    padding: 0;
+} 
+.mid2 .mid2swiper .swiper-wrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.mid2 .mid2swiper .swiper-wrapper img{
+    position: absolute;
+    z-index: 1;
+}
+.mid2 .mid2swiper .swiper-wrapper #one .caption{
+    position: absolute;
+    top: 35%; left: 50%;
+    transform: translateX(-50%);
+    padding: 0 10px;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.mid2 .mid2swiper .swiper-wrapper #one .caption strong{
+    font-size: 30px;
+    display: block;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.mid2 .mid2swiper .swiper-wrapper #one .caption span{
+    letter-spacing: 0.5px;
+}
+.mid2 .mid2swiper .swiper-wrapper #two .caption{
+    position: absolute;
+    top: 35%; left: 50%;
+    transform: translateX(-50%);
+    padding: 0 10px;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.mid2 .mid2swiper .swiper-wrapper #two .caption strong{
+    font-size: 30px;
+    display: block;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.mid2 .mid2swiper .swiper-wrapper #two .caption span{
+    letter-spacing: 0.5px;
+}
+.mid2 .mid2swiper .swiper-wrapper #three .caption{
+    position: absolute;
+    top: 35%; right: -45%;
+    transform: translateX(-50%);
+    padding: 0 10px;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+}
+.mid2 .mid2swiper .swiper-wrapper #three .caption strong{
+    font-size: 30px;
+    display: block;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.mid2 .mid2swiper .swiper-wrapper #three .caption span{
+    letter-spacing: 0.5px;
+}
+.mid2 .mid2swiper .swiper-wrapper #four .caption{
+    position: absolute;
+    top: 35%; left: 55%;
+    transform: translateX(-50%);
+    padding: 0 10px;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+.mid2 .mid2swiper .swiper-wrapper #four .caption strong{
+    font-size: 30px;
+    display: block;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.mid2 .mid2swiper .swiper-wrapper #four .caption span{
+    letter-spacing: 0.5px;
+}
+.mid2 i{
+    position: absolute;
+    z-index: 9;
+    width: 400px;
+    height: 400px;
+    background: url(../images/oliveleaf.png) no-repeat center;
+    background-size: 100%;
+    opacity: 50%;
+    bottom: -100px; left: -50px;
+    transform: rotate(90deg);
+}
+
+
+/* ======mid3====== */
+.mid3{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+.mid3 .titlecap{
+    width: 100%;
+    height: 80px;
+    position: relative;
+}
+.mid3 .titlecap strong{
+    font-size: 60px;
+    font-style: italic;
+    position: absolute;
+    text-align: center;
+    margin-bottom: 50px;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.mid3 .top{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin: 30px 0;
+}
+.mid3 .top .line{
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    position: absolute;
+    top: -50%;
+    transform: translateY(-50%);
+}
+.mid3 .top .circles{
+    display: flex;
+    width: 1240px;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 2px;
+}
+.mid3 .top .circles > span{
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    border-radius: 30px;
+    position: relative;
+}
+.mid3 .top .circles > span > span{
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mid3 .bottom{
+    width: 1240px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.mid3 .bottom .caption{
+    width: 360px;
+    font-size: 19px;
+    text-align: center;
+    line-height: 30px;
+}
+.mid3 i{
+    position: absolute;
+    z-index: 9;
+    width: 400px;
+    height: 400px;
+    background: url(../images/oliveleaf.png) no-repeat center;
+    background-size: 100%;
+    opacity: 50%;
+    bottom: -100px; right: -30px;
+    transform: rotate(-70deg);
+}
+
+
+/* ======mid4====== */
+.mid4{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.mid4 .container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.mid4 .container strong{
+    font-size: 50px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mid4 .container .itemgroup{
+    width: 1240px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+}
+.mid4 .container .itemgroup .imgcover{
+    width: 500px;
+    height: 600px;
+    background: url(../images/mid4.jpg) no-repeat center/cover;
+    border-radius: 50px;
+    z-index: 9;
+    margin: 0 auto;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mid4 .container .itemgroup ul{
+    position: absolute;
+    z-index: 0;
+    width: 50%;
+    transform: translateY(-50%);
+    top: 45%;
+}
+.mid4 .container .itemgroup ul li{
+    width: 500px;
+    height: 100px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px #777;
+    position: relative;
+}
+.mid4 .container .itemgroup ul li span{
+    width: 18px; height: 18px;
+    background-color: rgb(83, 146, 58);
+    border-radius: 10px;
+    position: absolute;
+}
+.mid4 .container .itemgroup ul li p{
+    width: 280px;
+    position: absolute;
+    font-weight: 550;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 30px;
+}
+.mid4 .container .itemgroup .left li{
+    border-radius: 50px 0 0 50px;
+    position: relative;
+    left: 52%;
+    transition: all .5s;
+    padding: 0;
+}
+.mid4 .container .itemgroup:hover .left li{
+    left: 10%;
+}
+.mid4 .container .itemgroup:hover .left li:nth-child(2){
+    transition-delay: .1s;
+}
+.mid4 .container .itemgroup:hover .left li:nth-child(3){
+    transition-delay: .2s;
+}
+.mid4 .container .itemgroup:hover .left li:nth-child(4){
+    transition-delay: .3s;
+}
+.mid4 .container .itemgroup:hover .left li:nth-child(5){
+    transition-delay: .4s;
+}
+.mid4 .container .itemgroup .left li span{
+    left: 2%; top: 50%;
+    transform: translateY(-50%);
+}
+.mid4 .container .itemgroup .left li p{
+    left: 30px;
+}
+
+.mid4 .container .itemgroup .right{
+    /* left: 55%; */
+    left: 34%;
+}
+.mid4 .container .itemgroup .right li{
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    /* right: -67%; */
+    transition: all .5s;
+    right: 0%;
+}
+.mid4 .container .itemgroup:hover .right li{
+    /* right: -100%; */
+    right: -40%;
+}
+.mid4 .container .itemgroup:hover .right li:nth-child(2){
+    transition-delay: .1s;
+}
+.mid4 .container .itemgroup:hover .right li:nth-child(3){
+    transition-delay: .2s;
+}
+.mid4 .container .itemgroup:hover .right li:nth-child(4){
+    transition-delay: .3s;
+}
+.mid4 .container .itemgroup:hover .right li:nth-child(5){
+    transition-delay: .4s;
+}
+.mid4 .container .itemgroup .right li span{
+    right: 2%; top: 50%;
+    transform: translateY(-50%);
+}
+.mid4 .container .itemgroup .right li p{
+    right: 30px;
+    text-align: right;
+}
+.mid4 i{
+    position: absolute;
+    z-index: 9;
+    width: 300px;
+    height: 300px;
+    background: url(../images/rasberry.png) no-repeat center;
+    background-size: 100%;
+    opacity: 50%;
+    bottom: -10px; left: -50px; 
+}
+
+/* ======mid5====== */
+.mid5{
+    width: 100%;
+    height: 95vh;
+}
+.mid5 .container{
+    width: 1240px;
+    margin: 0 auto;
+    position: relative;
+}
+.mid5 .caption strong{
+    font-size: 50px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 20px;
+}
+.mid5 .caption span{
+    font-size: 22px;
+}
+.mid5 ul{
+    width: 60%;
+    position: absolute;
+    top: 30%; right: 0px;
+    display: grid;
+    grid-template-columns: 250px 1px 250px 250px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+.mid5 ul li{
+    width: 250px;
+    height: 400px;
+    position: relative;
+    box-shadow: 4px 4px 5px 0 #8a8a8a;
+    overflow: hidden;
+}
+.mid5 ul li img{
+    max-height: 100%;
+    transition: all .5s;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mid5 ul li:hover img{
+    transform: scale(1.1) translateX(-50%);
+}
+.mid5 ul li strong{
+    font-size: 22px;
+    display: block;
+}
+
+.mid5 ul li:nth-child(-n + 2){
+    border-radius: 200px 200px 30px 30px;
+}
+.mid5 ul li:nth-child(-n + 2) .cap1{
+    position: absolute;
+    bottom: 20px; left: 20px;
+    color: #fff;
+}
+.mid5 ul li:nth-child(1){
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+.mid5 ul li:nth-child(2){
+    grid-row: 2/4;
+    grid-column: 4/5;
+}
+
+.mid5 ul li:nth-last-child(-n + 2){
+    border-radius: 30px 30px 200px 200px;
+}
+.mid5 ul li:nth-last-child(-n + 2) .cap2{
+    position: absolute;
+    top: 20px; left: 20px;
+    color: #000;
+}
+.mid5 ul li:nth-child(3){
+    grid-row: 2/4;
+    grid-column: 1/2;
+}
+.mid5 ul li:nth-child(4){
+    grid-column: 2/4;
+    grid-row: 3/5;
+}
+.mid5 ul li .cap1{
+    transition: all 0.5s;
+}
+.mid5 ul li .cap2{
+    transition: all 0.5s;
+}
+.mid5 ul li:hover .cap1{
+    transform: translateY(-10px);
+}
+.mid5 ul li:hover .cap2{
+    transform: translateY(10px);
+}
+
+.gotop{
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    display: block;
+    position: fixed;
+    bottom: 50px; right: 50px;
+    border-radius: 30px;
+    border: 1px solid #777;
+    z-index: 100;
+    cursor: pointer;
+}
+.gotop span{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-right: 5px solid #fff;
+    border-top: 5px solid #fff;
+    top: 22px; left: 19px;
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,145 @@
+@charset "utf=8";
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer{
+    width: 100%;
+    max-width: 1920px;
+    z-index: 1000;
+ }
+.fcon{
+    background-color: #000;
+    color: #B2B2B2;
+    width: 100%;
+    /* max-width: 1920px; */
+    height: 25rem;
+    overflow: hidden;
+  }
+  .inner{
+    margin: 0 auto;
+    text-align: center;
+    padding: 3.125rem 0px;
+  }
+ 
+  .ftop:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .ftop .ft-left{
+    float: left;
+    text-align: left;
+    position: relative;
+    margin-right: 31.25rem;
+    margin-left: 12.5rem;
+    margin-top: 0.938rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+.ftop .ft-left div:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.ftop .ft-left div{
+    float: left;
+}
+.ftop .ft-left .lefttxt{
+    color: #ccc;
+}
+.ftop .ft-left .lefttxt p{
+    margin-top: 0.25rem;
+}
+.ftop .ft-left .righttxt{
+    margin-left: 1.875rem;
+    color: #fff;
+    position: relative;
+}
+.ftop .ft-left .righttxt p{
+    margin-top: 0.25rem;
+}
+.ftop .ft-left .righttxt p:last-child{
+    position: absolute;
+    bottom: 0.125rem; left: 18.75rem;
+}
+.ftop .ft-right{
+    float: left;
+    text-align: left;
+  }
+.ftop .ft-right .f-inner{
+    margin-bottom: 1.875rem;
+    font-size: 1.438rem;
+}
+.ftop .ft-right .f-inner .first{
+    color: #fff;
+}
+.ftop .ft-right .f-inner span.top{
+    color: #fff;
+}
+.ftop .ft-right .ft-txt{
+    font-size: 1.25rem;
+}
+
+.line{
+    margin-top: 3.125rem;
+    width: 100%;
+    border-bottom: 1px solid #B2B2B2;
+}
+.fbot{
+    padding-top: 3.125rem;
+}
+.fbot:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.fbot .copy{
+    font-size: 1.25rem;
+    float: left;
+    margin-right: 34.375rem;
+    margin-left: 12.5rem;
+}
+.fbot .snsBtns{
+    float: left;
+}
+.fbot .snsBtns a{
+    width: 3.438rem;
+    height: 3.375rem;
+    display: inline-block;
+    background: url(../images/icon.png);
+    border-radius: 50%;
+    text-indent: -9999px;
+    margin-right: 40px;
+}
+.fbot .snsBtns .btn1{
+    background-position: 0px 1px;
+}
+.fbot .snsBtns .btn2{
+    background-position: -5rem 1px;
+}
+.fbot .snsBtns .btn3{
+    background-position: -10.125rem 1px;
+}
+.fbot .snsBtns .btn4{
+    background-position: -15rem 1px; 
+}
+.fbot .snsBtns .btn5{
+    background-position: -20.063rem 1.5px;
+}
